@@ -1,0 +1,700 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text-color: #333;
+    --text-light: #666;
+    --background-light: #f8fafc;
+    --border-color: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--background-light);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    padding: 4rem 1.5rem;
+    background-color: #fce7f3;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+/* 
+.trusted-experts { /* ... (previous styles) ... */ 
+/* .expert-grid { ... (previous styles) ... } */ */
+.expert-logo {
+    display: flex;
+    justify-content: center; /* Center logos horizontally */
+    align-items: center; /* Center logos vertically */
+    padding: 1rem; /* Add some padding around logos */
+}
+
+.expert-logo img {
+    max-width: 100%; /* Make sure logos fit within their containers */
+    height: auto;
+}
+
+/* .master-finance { ... (previous styles) ... } */
+.master-finance-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    gap: 15rem; /* Add some space between image and text */
+}
+
+.laptop-image {
+    max-width: 50%; /* Adjust as needed */
+    height: auto;
+}
+
+.finance-text {
+    flex: 1; /* Allow text to take up remaining space */
+}
+
+.finance-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.user-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 0;
+}
+
+.features .container {
+    display: flex;
+    align-items: center;
+}
+
+.features-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.feature-list {
+    margin: 2rem 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-icon {
+    color: #22c55e;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 4rem 0;
+    background-color: var(--background-light);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.pricing-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-card button{
+    font-size: large;
+    background-color: rgb(20, 20, 239);
+    color: white;
+    /* border-radius: 15%; */
+    border-color: #1d4ed8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; /* Different values for each corner */
+}
+
+.pricing-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-period {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.pricing-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.pricing-features {
+    margin: 1rem 0;
+    list-style: none;
+}
+
+.pricing-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 0;
+    
+    background-color: #fce7f3;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background-color: var(--background-light);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.testimonial-content {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-weight: 500;
+}
+
+.testimonial-role {
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 4rem 0;
+    background-color: var(--background-light);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.faq-button {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: left;
+    background: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-answer.active {
+    padding: 1rem 0;
+    max-height: 200px;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-link {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text-color: #333;
+    --text-light: #666;
+    --background-light: #f8fafc;
+    --border-color: #e5e7eb;
+    --navbar-color: #e9b7c8; /* Pink navbar color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--navbar-color); /* Pink background */
+    border-bottom: 1px solid var(--border-color); /* Keep the border */
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white; /* Logo text color */
+}
+
+.nav-link {
+    color: white; /* Link color */
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--background-light);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    padding: 4rem 1.5rem;
+    background-color: #fce7f3;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* Trusted Experts Section */
+.trusted-experts {
+    padding: 4rem 0;
+    background-color: var(--background-light);
+}
+
+.expert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.expert-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.expert-card p {
+    color: var(--text-light);
+}
+
+/* Master Your Finance Section */
+.master-finance {
+    padding: 4rem 0;
+}
+
+.master-finance .container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.master-finance-content {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.master-finance-grid {
+    display: grid;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text-color: #333;
+    --text-light: #666;
+    --background-light: #f8fafc;
+    --border-color: #e5e7eb;
+    /* --navbar-color: #f06292; Pink navbar color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+}.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navigation */.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--navbar-color); /* Pink background */
+    border-bottom: 1px solid var(--border-color); /* Keep the border */
+}.nav-left,.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white;}
+
+    /* style3.css */
+/* ... (previous CSS code) ... */
+
+.pricing {
+    padding: 4rem 0;
+    background-color: var(--background-light);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.pricing-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+    text-align: center; /* Center content within card */
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-icon {
+    font-size: 2rem; /* Increased icon size */
+    margin-bottom: 1rem;
+    color: var(--primary-color); /* Icon color */
+}
+
+.plan-name {
+    font-size: 1.5rem; /* Increased plan name size */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-period {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 1rem; /* Slightly smaller font size */
+}
+
+.pricing-features {
+    margin: 1rem 0;
+    list-style: none;
+    text-align: left; /* Align features to the left */
+}
+
+.pricing-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-feature::before { /* Add checkmark before each feature */
+    content: "✔";
+    color: #22c55e; /* Green checkmark */
+    margin-right: 0.5rem;
+}
+
+.btn-primary {
+    /* ... (previous styles) ... */
+    padding: 0.75rem 1.5rem; /* Adjust button padding */
+    font-size: 1rem; /* Adjust button font size */
+}
+
+/* ... (rest of the CSS code) ... */
+
+/* style3.css */
+/* ... (previous CSS code) ... */
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background-color: var(--background-light);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+    overflow: hidden; /* Ensure content doesn't overflow on hover */
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Add shadow on hover */
+    /* Optionally, you can add a background color change or other effects here */
+    /* background-color: #f0f0f0;  Example background color change */
+}
+
+.testimonial-content {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    /* Add any other styling for the content */
+}
+
+.testimonial-author {
+    font-weight: 500;
+    /* Add any other styling for the author */
+}
+
+.testimonial-role {
+    color: var(--text-light);
+    font-size: 0.875rem;
+    /* Add any other styling for the role */
+}
+
+/* ... (rest of the CSS code) ... */
